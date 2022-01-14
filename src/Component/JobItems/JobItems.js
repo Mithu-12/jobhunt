@@ -35,7 +35,7 @@ const JobItems = () => {
                                        <Row>
                                         <Col xs={12} md={6}>
                                             <div className="job-hero">
-                                            <i class="fas fa-house-damage"></i>
+                                            
                                             <div className="job-icon">
                                             <SiHomeassistant/>
                                             </div>
@@ -64,7 +64,7 @@ const JobItems = () => {
                                         <Row>
                                         <Col xs={12} md={6}>
                                             <div className="job-hero">
-                                            <i class="fas fa-house-damage"></i>
+                                            
                                             <div className="job-icon">
                                             <SiHomeassistant/>
                                             </div>
@@ -92,7 +92,7 @@ const JobItems = () => {
                                         <Row>
                                         <Col xs={12} md={6}>
                                             <div className="job-hero">
-                                            <i class="fas fa-house-damage"></i>
+                                            
                                             <div className="job-icon">
                                             <SiHomeassistant/>
                                             </div>
@@ -120,7 +120,7 @@ const JobItems = () => {
                                         <Row>
                                         <Col xs={12} md={6}>
                                             <div className="job-hero">
-                                            <i class="fas fa-house-damage"></i>
+                                            
                                             <div className="job-icon">
                                             <SiHomeassistant/>
                                             </div>
@@ -148,7 +148,7 @@ const JobItems = () => {
                                         <Row>
                                         <Col xs={12} md={6}>
                                             <div className="job-hero">
-                                            <i class="fas fa-house-damage"></i>
+                                            
                                             <div className="job-icon">
                                             <SiHomeassistant/>
                                             </div>
