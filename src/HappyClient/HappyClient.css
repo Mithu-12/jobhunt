@@ -1,0 +1,40 @@
+.client-content h5{
+    color: lightgrey;
+}
+.client-content h5::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    /* border: 1px solid #18d26e; */
+    background: #249157;
+    bottom: 0;
+    left: calc(90% - 20px);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    z-index: 9999;
+}
+.client-info{
+    padding: 30px 0;
+    text-align: center;
+    
+}
+.client-container{
+    background-color: #ecf3f5;
+}
+.client-section{
+    background-color: #518e7d;
+    color: #fff;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    padding: 35px 15px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+.client-section p{
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -1,0 +1,25 @@
+.faq-container{
+    display: flex;
+    aligt-items-align: center;
+    justify-content: center;
+    padding: 60px 0px;
+}
+.faq-fi button{
+    background-color: #508e7d;
+    padding: 15px 40px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    border: none;
+}
+.faq-fi button:hover{
+    background-color: #ec563d;
+    transition: all 0.5s ease;
+}
+.faq{
+    margin-top: 15px;
+}
+.faq-fi h3{
+    margin-top: 10px;
+}

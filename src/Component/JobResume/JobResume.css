@@ -1,0 +1,31 @@
+.resume-details{
+    background-color: #fbfbfb;
+    padding: 40px 0;
+}
+.resume-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+    background-color: RGB(255, 255, 255);
+    color: #518e7d;
+    transition: all 0.5s ease;
+}
+.resume-detail:hover{
+    background-color: #518e7d;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+resume-details h4{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+} 
+.resume-items{
+    margin: 30px 0px;
+    text-align:center
+}
+.resume-items h6{
+    font-weight: bold;
+    color: #518e7d;
+}

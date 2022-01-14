@@ -1,0 +1,56 @@
+.app-container{
+    background-image: linear-gradient(rgba(49, 49, 49, 0.92), 
+    rgba(61, 61, 61, 0.92));
+    height: 600px;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.apps{
+    padding-top: 90px;
+    color: #fff;
+}
+.app-info{
+    margin-top: 50px;
+    padding-top: 40px;
+    width: 600px
+}
+.app-info h5{
+    padding-bottom: 30px;
+}
+.app-info h5::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    /* border: 1px solid #18d26e; */
+    background: #249157;
+    bottom: 0;
+    left: calc(90% - 20px);
+    align-items: center;
+    text-align: center;
+    /* margin: auto; */
+    margin-top: 15px;
+    z-index: 9999;
+}
+.app-info h3, h5{
+    font-weight: bold;
+}
+.apps-button button{
+    color: #fff;
+    font-weight: bold;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 30px;
+    background: transparent;
+    margin-left: 10px;
+    border: 2px solid #388b5f;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.apps-button button:hover{
+    background-color: #388b5f;
+    transition: all 0.5s ease;
+}

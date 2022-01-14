@@ -1,0 +1,45 @@
+/* .HuntWork{
+    background-image: url('https://i.ibb.co/bvjWyWx/pattern01.png');
+    height: 500px;
+} */
+.HuntWork{
+    background-image: linear-gradient(rgba(49, 49, 49, 0.92), 
+    rgba(61, 61, 61, 0.92));
+    height: 350px;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.HuntWork-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    color: #fff;
+    width: 800px;
+    margin: auto;
+
+}
+.hunt-content{
+    text-align: center;
+}
+.hunt-content p{
+    padding-top: 40px;
+}
+.hunt-content h5:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    /* border: 1px solid #18d26e; */
+    background: #249157;
+    bottom: 0;
+    left: calc(90% - 20px);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    z-index: 9999;
+    
+}

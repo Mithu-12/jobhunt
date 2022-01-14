@@ -1,0 +1,38 @@
+.bannerItem-container{
+    background-color: #ecf3f5;
+    padding: 30px 0px;
+    
+}
+.banner-items{
+    background-color: #fff;
+    padding: 30px 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+.banner-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(82, 82, 82);
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+.bannerItem-button{
+    background-color: #518e7d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: #fff;
+    font-weight: bold;
+}
+.frelance{
+    text-align: center;
+    color: #a3a8bb;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}

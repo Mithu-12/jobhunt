@@ -1,0 +1,116 @@
+.job-container {
+    background-color: #ecf3f5;
+}
+.job-details{
+    background-color: #518e7d;
+    padding: 30px 0px;
+    text-align: center;
+    
+
+}
+.job-details h6{
+    font-weight: bold;
+    color: #fff;
+}
+.job-detail{
+    background: #fff;
+    padding: 15px 0;
+    margin: 8px 0px;
+    transition: all 0.5s ease;
+    display: block;
+}
+.job-detail:hover{
+    border: 2px solid #518e7d;
+    transition: all 0.5s ease;
+}
+/* .jobs:hover{
+    border: 2px solid #518e7d;
+} */
+.job-detail h6{
+    font-weight: bold;
+}
+.job-hero{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.job-icon{
+    padding:  10px 15px;
+    background-color: #f5f5f5;
+    color: black;
+    margin-right: 10px;
+    margin-left: 5px;
+    border: 12px solid #e3eeef;
+
+}
+.job-content{
+    text-align: center;
+    margin-top: 15px;
+}
+.font-hero{
+    font-size: 16px;
+}
+.job-button{
+    width: 100%;
+    background-color: #518e7d;
+    border: none;
+    transition: all 0.3;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 0px;
+}
+.job-button:hover{
+    background-color: #fff;
+    color: #518e7d;
+}
+.job-side{
+    padding: 20px 0;
+    background-color: #fff;
+}
+.job-sides{
+    margin-left: 20px;
+}
+.job-sides h6{
+    font-weight: bold;
+    color: #5c5f69
+}
+
+.job-statics{
+    padding-top: 70px;
+    padding-bottom: 40px;
+    text-align:center;
+    font-weight: bold;
+}
+.job-statics h2{
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: #5d606a;
+    font-family: Ubuntu;
+}
+.job-statics h4{
+    color: #5e616d;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.job-statics h4::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    /* border: 1px solid #18d26e; */
+    background: #249157;
+    bottom: 0;
+    left: calc(90% - 20px);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    z-index: 9999;
+}
+.font-hero{
+    font-family: Ubuntu;
+    color: #5c5f69;
+}
+.job-position{
+    padding-bottom: 30px;
+}

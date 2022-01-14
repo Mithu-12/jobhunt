@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@400;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 .App {
   text-align: center;
 }
@@ -22,6 +23,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
+  font-family: Ubuntu;
 }
 
 .App-link {
