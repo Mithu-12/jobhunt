@@ -1,10 +1,29 @@
+.sideBar{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 .itemsall{
     display: block  !important;
     margin-top: 20px !important;
     text-decoration: none !important;
     font-size: 18px !important;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
     color: #000;
+    padding: 7px 15px;
+    transition: all 0.5s ease;
+    width: 100% !important;
+  }
+  .itemsall span{
+    margin-right: 14px;
+  }
+  .itemsall:hover{
+    background-image: linear-gradient(to right top, #051937, #292a64, #60338a, #a231a6, #eb12b2);
+    transition: 0.5s ease;
+    color: #fff;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
   .css-1t29gy6-MuiToolbar-root, .navBar{
     background-color: #fff !important;
@@ -27,6 +46,56 @@
     background-color: #0000 !important;
     color: #fff;
   }
+  .nav-sidebar{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .close-icon:hover{
+    background-image: linear-gradient(to right top, #051937, #292a64, #60338a, #a231a6, #eb12b2) !important;
+    transition: 0.5s ease;
+  }
+  .nav-app{
+    margin-right: 20px !important;
+    font-size: 16px;
+  }
+  .nav-image1{
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    display: inline-block !important;
+    
+  }
+  .nav-image{
+    padding: 0 20px;
+
+  }
+  .nav-option{
+    display: flex !important;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .nav-header{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;;
+  }
+  .header-image{
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+  }
+  /* .MuiTypography-h6{
+    position: relative;
+    left: 0;
+    margin-right: 10px !important;
+    right: 10px !important;
+    margin: auto !important;
+  } */
 
   @media only screen and (max-width: 500px) {
     .css-1t29gy6-MuiToolbar-root, .navBar{

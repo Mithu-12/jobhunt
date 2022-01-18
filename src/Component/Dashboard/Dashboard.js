@@ -1,15 +1,24 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import './Dashboard.css'
+import React from 'react';
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 import {
   BrowserRouter as Router,
@@ -18,150 +27,192 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
-import Orderlist from '../Orderlist/Orderlist';
-import AddProduct from '../AddProduct/AddProduct';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
-import useFirebase from '../../Hook/useFirebase';
-import Review from '../Review/Review';
-import Payment from '../Payment/Payment';
-import ManageProduct from '../ManageProduct/ManageProduct';
-import UpdateProduct from '../UpdataProduct/UpdateProduct';
-
+import './Dashboard.css'
+import JobResume from '../JobResume/JobResume';
+import BannerItems from '../BannerItems/BannerItems';
+import HuntWork from '../HuntWork/HuntWork';
+import Priceing from '../Pricing/Priceing';
 
 const drawerWidth = 240;
 
-function Dashboard(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  let { path, url } = useRouteMatch();
-  const { admin } = useFirebase();
-  console.log(admin);
-  
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+  appBar: {
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: -drawerWidth,
+  },
+  contentShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
+  },
+}));
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+export default function PersistentDrawerLeft() {
+  const classes = useStyles();
+  const theme = useTheme();
+  let { path, url } = useRouteMatch();
+  const [open, setOpen] = React.useState(true);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
-  const { user, handleLogout } = useFirebase();
-  
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   const drawer = (
     <div className="sideBar">
-      <Toolbar />
-  
-      
-      {admin && <Box>
-        <Link className="itemsall" to={`${url}/addProduct`}>Add Product</Link>
-      <Link className="itemsall" to={`${url}/manageOrder`}>Manage Orders</Link>
-        <Link className="itemsall" to={`${url}/manageProduct`}>Manage Product</Link>
-        <Link className="itemsall" to={`${url}/makeAdmin`}>Make Admin</Link>
-      </Box>}
-      {!admin &&<Box><Link className="itemsall" to={`${url}/pay`}>Pay</Link>
-      <Link className="itemsall" to={`${url}/orderlist`}>My Orders</Link>
-      <Link className="itemsall" to={`${url}/review`}>Review</Link></Box>}
-      
-      <Link className="itemsall" to='/login'><button className='items btn-danger' onClick={handleLogout}><li>Log Out</li></button></Link>
-          
+      {/* <Toolbar /> */}
+        <Link className="itemsall" to={`${url}/addProduct`}>
+          <span><i class="fas fa-tachometer-alt"></i></span>
+           Dashboard</Link>
+        <Link className="itemsall" to={`${url}/makeAdmin`}>
+        <span><i class="fas fa-users"></i></span>
+          Manage Orders</Link>
+        <Link className="itemsall" to={`${url}/orderlist`}>
+        <span><i class="fas fa-users"></i></span>
+        Manage Product</Link>
+        <Link className="itemsall" to={`${url}/makeAdmin`}>
+        <span><i class="fas fa-users"></i></span>
+          Make Admin</Link>
       
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
-    <Box className="sideBar" sx={{ display: 'flex', marginBottom: 50 }}>
+    <div className={classes.root}>
       <CssBaseline />
-      <AppBar className='navBar' style={{marginTop: 70}}
+      <AppBar
+        style={{ backgroundImage: 'linear-gradient(to right top, #051937, #292a64, #60338a, #a231a6, #eb12b2)'}}
         position="fixed"
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
       >
+        <div className="nav-sidebar">
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
+            onClick={handleDrawerOpen}
             edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Dashboard
+           <Typography variant="h6" noWrap>
+          [VIBASU.COM]
           </Typography>
-        </Toolbar>
+         </Toolbar>
+        <div className='nav-option'>
+        <Typography variant="p"  className='nav-app'>
+            Mithu
+          </Typography>
+          <NotificationsIcon/>
+          <div className="nav-image">
+          <img className="nav-image1" src="https://www.w3schools.com/w3css/img_avatar3.png" alt="" />
+        </div>
+        <ArrowDropDownIcon></ArrowDropDownIcon>
+        </div>
+        
+          </div>
       </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
+      <Drawer
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer
-          // className="disStyle"
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth},
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        <div className={classes.drawerHeader}>
+          <IconButton className='close-icon' onClick={handleDrawerClose}>
+            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          </IconButton>
+        </div>
+        {/* <Divider /> */}
+        <div className="nav-header">
+        <img className="header-image" src="https://www.w3schools.com/w3css/img_avatar3.png" alt="" />
+        <div className="header-info">
+          <h6>Mithu</h6>
+          <p>Employe</p>
+        </div>
+        </div>
+        {drawer}
+        
+      </Drawer>
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
       >
-        <Toolbar />
-        <Switch style={{marginTop: 50}}>
+        <div className={classes.drawerHeader} />
+        <Typography>
+        <Switch style={{marginTop: 0}}>
         <Route exact path={path}>
-          {!admin ? <Orderlist></Orderlist> : <ManageProduct></ManageProduct>}
+         <JobResume></JobResume>
         </Route>
         <Route path={`${path}/addProduct`}>
-          < AddProduct/>
+          <BannerItems></BannerItems>
         </Route>
         <Route path={`${path}/orderlist`}>
-          < Orderlist/>
+          < HuntWork/>
         </Route>
         <Route path={`${path}/makeAdmin`}>
-          <MakeAdmin/>
+          <Priceing/>
           </Route>
-          <Route path={`${path}/manageProduct`}>
-          <ManageProduct/>
-          </Route>
-        <Route path={`${path}/manageOrder`}>
-          <ManageAllOrder/>
-        </Route>
-        <Route path={`${path}/review`}>
-          <Review/>
-        </Route>
-        <Route path={`${path}/pay`}>
-          <Payment/>
-        </Route>
-        <Route path={`${path}/updateProduct:id`}>
-          <UpdateProduct/>
-        </Route>
+          
       </Switch>
-      </Box>
-    </Box>
+        </Typography>
+       
+      </main>
+    </div>
   );
 }
-export default Dashboard;

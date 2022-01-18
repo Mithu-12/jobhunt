@@ -7,7 +7,7 @@ import Home from './Component/Home/Home';
 import Header from './Component/Header/Header';
 import Register from './Component/Register/Register';
 import Login from './Component/Login/Login';
-import Sidebar from './Component/Sidebar/Sidebar';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
           <Login></Login>
           </Route>
           <Route path="/dashboard">
-          <Sidebar></Sidebar>
+          <Dashboard></Dashboard>
           </Route>
       </Switch>
     </Router>
