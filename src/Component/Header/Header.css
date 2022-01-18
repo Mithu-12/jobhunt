@@ -1,0 +1,45 @@
+.reg-background{
+  background-color: transparent;
+  color: black;
+}
+.items-join{
+  border: 1px solid #017848;
+  list-style: none;
+  text-decoration: none;
+  color: #017848;
+  padding: 6px 35px;
+  font-weight: 600;
+  border-radius: 5px;
+  
+}
+.items-join:hover{
+  background-color: #017848;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.items-login{
+  border: 1px solid #017848;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 35px;
+  margin-left: 15px;
+  font-weight: 600;
+  background-color: #017848 !important;
+  border-radius: 5px;
+
+}
+.items-login:hover{
+  background-color: #fff !important;
+  color: #017848;
+  transition: all 0.5s ease;
+}
+.nav-hero{
+  font-size: 33px;
+  font-weight: bold;
+  color: #017848 !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+

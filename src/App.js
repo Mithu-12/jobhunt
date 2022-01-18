@@ -1,30 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Banner from './Component/Banner/Banner';
-import BannerItems from './Component/BannerItems/BannerItems';
-import JobItems from './Component/JobItems/JobItems';
-import JobResume from './Component/JobResume/JobResume';
-import HuntWork from './Component/HuntWork/HuntWork';
-import HappyClient from './HappyClient/HappyClient';
-import Priceing from './Component/Pricing/Priceing';
-import FAQ from './Component/FAQ/FAQ';
-import Apps from './Component/Apps/Apps';
-import Footer from './Component/Footer/Footer';
+
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Home from './Component/Home/Home';
+import Header from './Component/Header/Header';
+import Register from './Component/Register/Register';
+import Login from './Component/Login/Login';
+import Sidebar from './Component/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className="">
-     <Banner></Banner>
-     <BannerItems></BannerItems>
-     <JobItems></JobItems>
-     <JobResume></JobResume>
-     <HuntWork></HuntWork>
-     <HappyClient></HappyClient>
-     <Priceing></Priceing>
-     <FAQ></FAQ>
-     <Apps></Apps>
-     <Footer></Footer>
+      <Router>
+        <Header></Header>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route exact path="/home">
+          <Home></Home>
+        </Route>
+        <Route path="/register">
+          <Register></Register>
+          </Route>
+          <Route path="/login">
+          <Login></Login>
+          </Route>
+          <Route path="/dashboard">
+          <Sidebar></Sidebar>
+          </Route>
+      </Switch>
+    </Router>
+     
     </div>
   );
 }

@@ -17,7 +17,7 @@ const JobItems = () => {
                                     <div className="job-details">
                                         <Row>
                                         <Col xs={12} md={6}>
-                                            <h6>JOB TITLE</h6>
+                                            <h6>JOB TITLE Mithu</h6>
                                             
                                          </Col>
                                         <Col xs={12} md={3}>

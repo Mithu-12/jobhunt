@@ -12,14 +12,7 @@ import banner3 from '../Images/banner-03.jpg'
 const Banner = () => {
     return (
         <div className="banner-containers">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="#"><AiOutlineMenu></AiOutlineMenu></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-			
-		</div>
-	</nav>
-   
-            <Carousel fade >
+        <Carousel fade >
                 <Carousel.Item className='carousel-container'>
                     <img
                         className="d-block w-100"

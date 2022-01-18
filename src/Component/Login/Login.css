@@ -1,0 +1,51 @@
+.login {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 10px;
+  
+  }
+  .log-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  .input-field input{
+    color: #4e4e4e;
+    border: 0.5px solid #BFBFBF;
+  }
+  .btnClass{
+    border: 2px solid rgba(26, 106, 197, 0.849);
+    border-radius: 5px;
+    background-color: rgb(223, 212, 212);
+    font-weight: 600;
+  }
+  .btnClass:hover{
+    background-color: transparent;
+  }
+  
+  .log-email{
+    width: 400px !important;
+    padding: 0px 5px;
+    height: 40px !important;
+  }
+  .log-password{
+    width: 400px !important;
+    padding: 0px 5px;
+    height: 40px !important;
+  }
+  .log-passwordField{
+    position: relative;
+  }
+  .log-passwordField span{
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+  }
+  .forgot{
+    text-align: center;
+    color: rgb(52, 122, 52) !important;
+  }
