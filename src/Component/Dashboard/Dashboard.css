@@ -53,7 +53,8 @@
   }
   .close-icon:hover{
     background-image: linear-gradient(to right top, #051937, #292a64, #60338a, #a231a6, #eb12b2) !important;
-    transition: 0.5s ease;
+    transition: 0.5s ease !important;
+    color: #fff !important;
   }
   .nav-app{
     margin-right: 20px !important;

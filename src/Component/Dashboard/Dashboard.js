@@ -208,8 +208,7 @@ export default function PersistentDrawerLeft() {
         <Route path={`${path}/makeAdmin`}>
           <Priceing/>
           </Route>
-          
-      </Switch>
+       </Switch>
         </Typography>
        
       </main>
